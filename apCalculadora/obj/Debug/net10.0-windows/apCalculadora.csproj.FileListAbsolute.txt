@@ -1,0 +1,17 @@
+C:\Users\Doni\OneDrive\Documents\Projeto3-TI221\apCalculadora\bin\Debug\net10.0-windows\apCalculadora.exe
+C:\Users\Doni\OneDrive\Documents\Projeto3-TI221\apCalculadora\bin\Debug\net10.0-windows\apCalculadora.deps.json
+C:\Users\Doni\OneDrive\Documents\Projeto3-TI221\apCalculadora\bin\Debug\net10.0-windows\apCalculadora.runtimeconfig.json
+C:\Users\Doni\OneDrive\Documents\Projeto3-TI221\apCalculadora\bin\Debug\net10.0-windows\apCalculadora.dll
+C:\Users\Doni\OneDrive\Documents\Projeto3-TI221\apCalculadora\bin\Debug\net10.0-windows\apCalculadora.pdb
+C:\Users\Doni\OneDrive\Documents\Projeto3-TI221\apCalculadora\obj\Debug\net10.0-windows\apCalculadora.FrmCalculadora.resources
+C:\Users\Doni\OneDrive\Documents\Projeto3-TI221\apCalculadora\obj\Debug\net10.0-windows\apCalculadora.csproj.GenerateResource.cache
+C:\Users\Doni\OneDrive\Documents\Projeto3-TI221\apCalculadora\obj\Debug\net10.0-windows\apCalculadora.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Doni\OneDrive\Documents\Projeto3-TI221\apCalculadora\obj\Debug\net10.0-windows\apCalculadora.AssemblyInfoInputs.cache
+C:\Users\Doni\OneDrive\Documents\Projeto3-TI221\apCalculadora\obj\Debug\net10.0-windows\apCalculadora.AssemblyInfo.cs
+C:\Users\Doni\OneDrive\Documents\Projeto3-TI221\apCalculadora\obj\Debug\net10.0-windows\apCalculadora.csproj.CoreCompileInputs.cache
+C:\Users\Doni\OneDrive\Documents\Projeto3-TI221\apCalculadora\obj\Debug\net10.0-windows\apCalculadora.sourcelink.json
+C:\Users\Doni\OneDrive\Documents\Projeto3-TI221\apCalculadora\obj\Debug\net10.0-windows\apCalculadora.dll
+C:\Users\Doni\OneDrive\Documents\Projeto3-TI221\apCalculadora\obj\Debug\net10.0-windows\refint\apCalculadora.dll
+C:\Users\Doni\OneDrive\Documents\Projeto3-TI221\apCalculadora\obj\Debug\net10.0-windows\apCalculadora.pdb
+C:\Users\Doni\OneDrive\Documents\Projeto3-TI221\apCalculadora\obj\Debug\net10.0-windows\apCalculadora.genruntimeconfig.cache
+C:\Users\Doni\OneDrive\Documents\Projeto3-TI221\apCalculadora\obj\Debug\net10.0-windows\ref\apCalculadora.dll
