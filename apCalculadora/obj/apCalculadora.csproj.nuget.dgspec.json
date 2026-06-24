@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Doni\\OneDrive\\Documents\\Projeto3-TI221\\apCalculadora\\apCalculadora.csproj": {}
+    "C:\\Users\\danie\\OneDrive\\Documents\\0_COTUCA\\Projeto3-TI221\\apCalculadora\\apCalculadora.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Doni\\OneDrive\\Documents\\Projeto3-TI221\\apCalculadora\\apCalculadora.csproj": {
+    "C:\\Users\\danie\\OneDrive\\Documents\\0_COTUCA\\Projeto3-TI221\\apCalculadora\\apCalculadora.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Doni\\OneDrive\\Documents\\Projeto3-TI221\\apCalculadora\\apCalculadora.csproj",
+        "projectUniqueName": "C:\\Users\\danie\\OneDrive\\Documents\\0_COTUCA\\Projeto3-TI221\\apCalculadora\\apCalculadora.csproj",
         "projectName": "apCalculadora",
-        "projectPath": "C:\\Users\\Doni\\OneDrive\\Documents\\Projeto3-TI221\\apCalculadora\\apCalculadora.csproj",
-        "packagesPath": "C:\\Users\\Doni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Doni\\OneDrive\\Documents\\Projeto3-TI221\\apCalculadora\\obj\\",
+        "projectPath": "C:\\Users\\danie\\OneDrive\\Documents\\0_COTUCA\\Projeto3-TI221\\apCalculadora\\apCalculadora.csproj",
+        "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danie\\OneDrive\\Documents\\0_COTUCA\\Projeto3-TI221\\apCalculadora\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Doni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

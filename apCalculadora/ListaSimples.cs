@@ -330,11 +330,10 @@ namespace apCalculadora
                 arquivoDeSaida.Close();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
         }
     }
 }
-
