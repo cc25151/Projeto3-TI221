@@ -31,14 +31,12 @@
             txtVisor = new TextBox();
             txtResultado = new TextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
-            btn0 = new Button();
             button20 = new Button();
             btnApagar = new Button();
             btnIgual = new Button();
             button16 = new Button();
             button15 = new Button();
             button14 = new Button();
-            btn1 = new Button();
             button12 = new Button();
             button11 = new Button();
             button10 = new Button();
@@ -52,6 +50,8 @@
             button2 = new Button();
             button1 = new Button();
             lbSequencias = new Label();
+            button13 = new Button();
+            button18 = new Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -83,14 +83,14 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.Controls.Add(btn0, 0, 4);
+            tableLayoutPanel1.Controls.Add(button18, 0, 4);
+            tableLayoutPanel1.Controls.Add(button13, 0, 3);
             tableLayoutPanel1.Controls.Add(button20, 3, 4);
             tableLayoutPanel1.Controls.Add(btnApagar, 2, 4);
             tableLayoutPanel1.Controls.Add(btnIgual, 1, 4);
             tableLayoutPanel1.Controls.Add(button16, 3, 3);
             tableLayoutPanel1.Controls.Add(button15, 2, 3);
             tableLayoutPanel1.Controls.Add(button14, 1, 3);
-            tableLayoutPanel1.Controls.Add(btn1, 0, 3);
             tableLayoutPanel1.Controls.Add(button12, 3, 2);
             tableLayoutPanel1.Controls.Add(button11, 2, 2);
             tableLayoutPanel1.Controls.Add(button10, 1, 2);
@@ -116,19 +116,6 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.Size = new Size(930, 619);
             tableLayoutPanel1.TabIndex = 2;
-            // 
-            // btn0
-            // 
-            btn0.BackColor = SystemColors.ButtonHighlight;
-            btn0.FlatStyle = FlatStyle.Flat;
-            btn0.Font = new Font("Trebuchet MS", 20F);
-            btn0.Location = new Point(7, 500);
-            btn0.Margin = new Padding(7, 8, 7, 8);
-            btn0.Name = "btn0";
-            btn0.Size = new Size(216, 107);
-            btn0.TabIndex = 20;
-            btn0.Text = "1";
-            btn0.UseVisualStyleBackColor = false;
             // 
             // button20
             // 
@@ -213,20 +200,6 @@
             button14.Text = "2";
             button14.UseVisualStyleBackColor = false;
             button14.Click += btnCalculadora_Click;
-            // 
-            // btn1
-            // 
-            btn1.BackColor = SystemColors.ButtonHighlight;
-            btn1.FlatStyle = FlatStyle.Flat;
-            btn1.Font = new Font("Trebuchet MS", 20F);
-            btn1.Location = new Point(7, 377);
-            btn1.Margin = new Padding(7, 8, 7, 8);
-            btn1.Name = "btn1";
-            btn1.Size = new Size(216, 107);
-            btn1.TabIndex = 12;
-            btn1.Text = "1";
-            btn1.UseVisualStyleBackColor = false;
-            btn1.Click += btnCalculadora_Click;
             // 
             // button12
             // 
@@ -406,6 +379,34 @@
             lbSequencias.Size = new Size(930, 61);
             lbSequencias.TabIndex = 3;
             // 
+            // button13
+            // 
+            button13.BackColor = SystemColors.ButtonHighlight;
+            button13.FlatStyle = FlatStyle.Flat;
+            button13.Font = new Font("Trebuchet MS", 20F);
+            button13.Location = new Point(7, 377);
+            button13.Margin = new Padding(7, 8, 7, 8);
+            button13.Name = "button13";
+            button13.Size = new Size(216, 107);
+            button13.TabIndex = 20;
+            button13.Text = "1";
+            button13.UseVisualStyleBackColor = false;
+            button13.Click += btnCalculadora_Click;
+            // 
+            // button18
+            // 
+            button18.BackColor = SystemColors.ButtonHighlight;
+            button18.FlatStyle = FlatStyle.Flat;
+            button18.Font = new Font("Trebuchet MS", 20F);
+            button18.Location = new Point(7, 500);
+            button18.Margin = new Padding(7, 8, 7, 8);
+            button18.Name = "button18";
+            button18.Size = new Size(216, 107);
+            button18.TabIndex = 21;
+            button18.Text = "0";
+            button18.UseVisualStyleBackColor = false;
+            button18.Click += btnCalculadora_Click;
+            // 
             // FrmCalculadora
             // 
             AutoScaleDimensions = new SizeF(17F, 40F);
@@ -437,7 +438,6 @@
         private Button button16;
         private Button button15;
         private Button button14;
-        private Button btn1;
         private Button button12;
         private Button button11;
         private Button button10;
@@ -451,6 +451,7 @@
         private Button button2;
         private Button button1;
         private Label lbSequencias;
-        private Button btn0;
+        private Button button18;
+        private Button button13;
     }
 }

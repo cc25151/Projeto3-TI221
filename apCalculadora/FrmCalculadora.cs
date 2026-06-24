@@ -25,8 +25,10 @@ namespace apCalculadora
                         numero += expressao[i];
                         i++;
                     }
+                    if (indiceLetra >= valorDe.Length)
+                        throw new Exception("Expressão com operandos demais!");
                     char letra = (char)('A' + indiceLetra);
-                    valorDe[indiceLetra] = double.Parse(numero); // inclui o número no vetor indexado por letras
+                    valorDe[indiceLetra] = double.Parse(numero, System.Globalization.CultureInfo.InvariantCulture); // inclui o número no vetor indexado por letras
                     indiceLetra++;
                     infixaComLetras += letra;
                 }
@@ -67,16 +69,20 @@ namespace apCalculadora
                     if (simboloLido != ')')
                         umaPilha.Empilhar(simboloLido);
                     else // desempilha quando o topo da pilha for '('
+                    {
+                        if (umaPilha.EstaVazia) // exceção caso o usuário digite uma expressão desbalanceada
+                            throw new Exception("Parênteses desbalanceados!");
                         umaPilha.Desempilhar();
+                    }
                 }
             }
 
-            // Descarrega a pilha para a saída
-            while (!umaPilha.EstaVazia)
+            while (!umaPilha.EstaVazia) // descarrega a pilha para a saída
             {
                 char operador = umaPilha.Desempilhar();
-                if (operador != '(')
-                    resultado += operador;
+                if (operador == '(')
+                    throw new Exception("Parênteses desbalanceados");
+                resultado += operador;
             }
 
             return resultado;
@@ -114,7 +120,9 @@ namespace apCalculadora
                     umaPilha.Empilhar(valorDe[simbolo - 'A']);
                 else
                 {
+                    if (umaPilha.EstaVazia) throw new Exception("Expressão inválida!");
                     double operando2 = umaPilha.Desempilhar();
+                    if (umaPilha.EstaVazia) throw new Exception("Expressão inválida!");
                     double operando1 = umaPilha.Desempilhar();
                     double valorParcial = ValorDaSubExpressao(operando1, simbolo, operando2);
                     umaPilha.Empilhar(valorParcial);
@@ -130,7 +138,9 @@ namespace apCalculadora
                 case '+': return operando1 + operando2;
                 case '-': return operando1 - operando2;
                 case '*': return operando1 * operando2;
-                case '/': return operando1 / operando2;
+                case '/':
+                    if (operando2 == 0) throw new Exception("Divisão por zero!");
+                    return operando1 / operando2;
                 case '^': return Math.Pow(operando1, operando2);
                 default: throw new Exception("Operador inválido");
             }
@@ -151,10 +161,18 @@ namespace apCalculadora
 
         private void btnIgual_Click(object sender, EventArgs e)
         {
-            var infixaComLetras = PrepararExpressao(txtVisor.Text);
-            var posfixa = ConverterInfixaParaPosfixa(infixaComLetras);
-            lbSequencias.Text = "Infixa: " + infixaComLetras + " | Pósfixa: " + posfixa;
-            txtResultado.Text = ValorDaExpressaoPosfixa(posfixa).ToString();
+            try
+            {
+                if (string.IsNullOrEmpty(txtVisor.Text)) return;
+                var infixaComLetras = PrepararExpressao(txtVisor.Text);
+                var posfixa = ConverterInfixaParaPosfixa(infixaComLetras);
+                lbSequencias.Text = "Infixa: " + infixaComLetras + " | Pósfixa: " + posfixa;
+                txtResultado.Text = ValorDaExpressaoPosfixa(posfixa).ToString(System.Globalization.CultureInfo.InvariantCulture);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
