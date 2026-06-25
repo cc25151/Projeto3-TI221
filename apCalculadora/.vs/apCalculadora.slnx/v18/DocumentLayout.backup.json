@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\danie\\OneDrive\\Documents\\0_COTUCA\\Projeto3-TI221\\apCalculadora\\",
+  "WorkspaceRootPath": "C:\\Users\\Doni\\OneDrive\\Documents\\Projeto3-TI221\\apCalculadora\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A4AAA2E6-B08F-1652-1E8C-4195F8F5BE6A}|apCalculadora.csproj|c:\\users\\danie\\onedrive\\documents\\0_cotuca\\projeto3-ti221\\apcalculadora\\frmcalculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A4AAA2E6-B08F-1652-1E8C-4195F8F5BE6A}|apCalculadora.csproj|c:\\users\\doni\\onedrive\\documents\\projeto3-ti221\\apcalculadora\\frmcalculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A4AAA2E6-B08F-1652-1E8C-4195F8F5BE6A}|apCalculadora.csproj|solutionrelative:frmcalculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4AAA2E6-B08F-1652-1E8C-4195F8F5BE6A}|apCalculadora.csproj|c:\\users\\danie\\onedrive\\documents\\0_cotuca\\projeto3-ti221\\apcalculadora\\frmcalculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A4AAA2E6-B08F-1652-1E8C-4195F8F5BE6A}|apCalculadora.csproj|C:\\Users\\Doni\\OneDrive\\Documents\\Projeto3-TI221\\apCalculadora\\frmcalculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A4AAA2E6-B08F-1652-1E8C-4195F8F5BE6A}|apCalculadora.csproj|solutionrelative:frmcalculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -18,40 +18,38 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "FrmCalculadora.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documents\\0_COTUCA\\Projeto3-TI221\\apCalculadora\\FrmCalculadora.cs",
+              "DocumentMoniker": "C:\\Users\\Doni\\OneDrive\\Documents\\Projeto3-TI221\\apCalculadora\\FrmCalculadora.cs",
               "RelativeDocumentMoniker": "FrmCalculadora.cs",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documents\\0_COTUCA\\Projeto3-TI221\\apCalculadora\\FrmCalculadora.cs [Projeto]",
+              "ToolTip": "C:\\Users\\Doni\\OneDrive\\Documents\\Projeto3-TI221\\apCalculadora\\FrmCalculadora.cs [Projeto]",
               "RelativeToolTip": "FrmCalculadora.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-24T20:38:33.385Z",
+              "IsPinned": true,
               "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "FrmCalculadora.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documents\\0_COTUCA\\Projeto3-TI221\\apCalculadora\\FrmCalculadora.cs",
+              "DocumentMoniker": "C:\\Users\\Doni\\OneDrive\\Documents\\Projeto3-TI221\\apCalculadora\\FrmCalculadora.cs",
               "RelativeDocumentMoniker": "FrmCalculadora.cs",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documents\\0_COTUCA\\Projeto3-TI221\\apCalculadora\\FrmCalculadora.cs",
+              "ToolTip": "C:\\Users\\Doni\\OneDrive\\Documents\\Projeto3-TI221\\apCalculadora\\FrmCalculadora.cs",
               "RelativeToolTip": "FrmCalculadora.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ8AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-23T16:58:11.696Z",
+              "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         }

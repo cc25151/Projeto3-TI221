@@ -1,3 +1,7 @@
+// Integrantes:
+// Gabriel Bellini Camargo - 25131
+// Pedro Henrique Sakamoto Mendes - 25151
+
 namespace apCalculadora
 {
     public partial class FrmCalculadora : Form
@@ -25,7 +29,7 @@ namespace apCalculadora
                         numero += expressao[i];
                         i++;
                     }
-                    if (indiceLetra >= valorDe.Length)
+                    if (indiceLetra >= valorDe.Length) // exceção caso o usuário digite uma expressão com mais de 26 operandos
                         throw new Exception("Expressão com operandos demais!");
                     char letra = (char)('A' + indiceLetra);
                     valorDe[indiceLetra] = double.Parse(numero, System.Globalization.CultureInfo.InvariantCulture); // inclui o número no vetor indexado por letras
@@ -56,7 +60,7 @@ namespace apCalculadora
                 {
                     bool parar = false;
 
-                    while (!parar && !umaPilha.EstaVazia && TemPrecedencia(umaPilha.OTopo(), simboloLido))
+                    while (!parar && !umaPilha.EstaVazia && TemPrecedencia(umaPilha.OTopo(), simboloLido)) // enquanto o topo da pilha tiver maior precedência que o símbolo lido, desempilha
                     {
                         char operadorComMaiorPrecedencia = umaPilha.Desempilhar();
 
@@ -88,7 +92,7 @@ namespace apCalculadora
             return resultado;
         }
 
-        public bool EhOperador(char simbolo)
+        public bool EhOperador(char simbolo) // checa se o símbolo é um operador ou parêntese
         {
             return simbolo == '(' || simbolo == ')' ||
                    simbolo == '+' || simbolo == '-' ||
@@ -96,7 +100,7 @@ namespace apCalculadora
                    simbolo == '^';
         }
 
-        public bool TemPrecedencia(char operador1, char operador2)
+        public bool TemPrecedencia(char operador1, char operador2) // retorna a precedência do operador1 em relação ao operador2
         {
             switch (operador1)
             {
@@ -110,7 +114,7 @@ namespace apCalculadora
                 default: return false;
             }
         }
-        public double ValorDaExpressaoPosfixa(string cadeiaPosfixa)
+        public double ValorDaExpressaoPosfixa(string cadeiaPosfixa) // calcula o valor de uma expressão para exibí-la no txtResultado
         {
             var umaPilha = new PilhaLista<double>();
             for (int atual = 0; atual < cadeiaPosfixa.Length; atual++)
@@ -118,7 +122,7 @@ namespace apCalculadora
                 char simbolo = cadeiaPosfixa[atual];
                 if (!EhOperador(simbolo)) // é um operando
                     umaPilha.Empilhar(valorDe[simbolo - 'A']);
-                else
+                else // se for símbolo operador, desempilha dois operandos e empilha o resultado da operação
                 {
                     if (umaPilha.EstaVazia) throw new Exception("Expressão inválida!");
                     double operando2 = umaPilha.Desempilhar();
@@ -131,7 +135,7 @@ namespace apCalculadora
             return umaPilha.Desempilhar(); // resultado final
         }
 
-        public double ValorDaSubExpressao(double operando1, char operador, double operando2)
+        public double ValorDaSubExpressao(double operando1, char operador, double operando2) // realiza operações básicas para calcular uma expressão maior
         {
             switch (operador)
             {
@@ -139,35 +143,38 @@ namespace apCalculadora
                 case '-': return operando1 - operando2;
                 case '*': return operando1 * operando2;
                 case '/':
-                    if (operando2 == 0) throw new Exception("Divisão por zero!");
+                    if (operando2 == 0) throw new Exception("Divisão por zero!"); // exceção caso o usuário tente dividir por zero
                     return operando1 / operando2;
                 case '^': return Math.Pow(operando1, operando2);
                 default: throw new Exception("Operador inválido");
             }
         }
 
-        private void btnCalculadora_Click(object sender, EventArgs e)
+        private void btnCalculadora_Click(object sender, EventArgs e) // exibe o valor do botão clicado no txtVisor
         {
             Button botao = (Button)sender;
             string valor = botao.Text;
             txtVisor.Text += valor;
         }
 
-        private void btnApagar_Click(object sender, EventArgs e)
+        private void btnLimpar_Click(object sender, EventArgs e) // limpa as exibições do txtVisor, txtResultado e lbSequencias
         {
-            if (txtVisor.Text.Length > 0)
-                txtVisor.Text = txtVisor.Text.Remove(txtVisor.Text.Length - 1); // se não estiver vazio, apaga o último caractere do visor
+            txtVisor.Text = "";
+            txtResultado.Text = "";
+            lbSequencias.Text = "";
         }
 
         private void btnIgual_Click(object sender, EventArgs e)
         {
             try
             {
-                if (string.IsNullOrEmpty(txtVisor.Text)) return;
+                if (string.IsNullOrEmpty(txtVisor.Text)) return; // se estiver vazio, não faz nada
+                // calcula as expressões infixa e pósfixa 
                 var infixaComLetras = PrepararExpressao(txtVisor.Text);
                 var posfixa = ConverterInfixaParaPosfixa(infixaComLetras);
-                lbSequencias.Text = "Infixa: " + infixaComLetras + " | Pósfixa: " + posfixa;
+                // calcula o resultado da expressão pósfixa e exibe as expressões e resultado
                 txtResultado.Text = ValorDaExpressaoPosfixa(posfixa).ToString(System.Globalization.CultureInfo.InvariantCulture);
+                lbSequencias.Text = "Infixa: " + infixaComLetras + " | Pósfixa: " + posfixa;
             }
             catch (Exception ex)
             {

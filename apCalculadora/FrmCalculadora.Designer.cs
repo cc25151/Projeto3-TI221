@@ -31,8 +31,10 @@
             txtVisor = new TextBox();
             txtResultado = new TextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
+            button18 = new Button();
+            button13 = new Button();
             button20 = new Button();
-            btnApagar = new Button();
+            btnLimpar = new Button();
             btnIgual = new Button();
             button16 = new Button();
             button15 = new Button();
@@ -50,8 +52,6 @@
             button2 = new Button();
             button1 = new Button();
             lbSequencias = new Label();
-            button13 = new Button();
-            button18 = new Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -62,7 +62,7 @@
             txtVisor.Margin = new Padding(7, 8, 7, 8);
             txtVisor.Name = "txtVisor";
             txtVisor.ReadOnly = true;
-            txtVisor.Size = new Size(930, 59);
+            txtVisor.Size = new Size(930, 42);
             txtVisor.TabIndex = 0;
             // 
             // txtResultado
@@ -72,7 +72,7 @@
             txtResultado.Margin = new Padding(7, 8, 7, 8);
             txtResultado.Name = "txtResultado";
             txtResultado.ReadOnly = true;
-            txtResultado.Size = new Size(930, 59);
+            txtResultado.Size = new Size(930, 42);
             txtResultado.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -86,7 +86,7 @@
             tableLayoutPanel1.Controls.Add(button18, 0, 4);
             tableLayoutPanel1.Controls.Add(button13, 0, 3);
             tableLayoutPanel1.Controls.Add(button20, 3, 4);
-            tableLayoutPanel1.Controls.Add(btnApagar, 2, 4);
+            tableLayoutPanel1.Controls.Add(btnLimpar, 2, 4);
             tableLayoutPanel1.Controls.Add(btnIgual, 1, 4);
             tableLayoutPanel1.Controls.Add(button16, 3, 3);
             tableLayoutPanel1.Controls.Add(button15, 2, 3);
@@ -117,6 +117,34 @@
             tableLayoutPanel1.Size = new Size(930, 619);
             tableLayoutPanel1.TabIndex = 2;
             // 
+            // button18
+            // 
+            button18.BackColor = SystemColors.ButtonHighlight;
+            button18.FlatStyle = FlatStyle.Flat;
+            button18.Font = new Font("Trebuchet MS", 20F);
+            button18.Location = new Point(7, 500);
+            button18.Margin = new Padding(7, 8, 7, 8);
+            button18.Name = "button18";
+            button18.Size = new Size(216, 107);
+            button18.TabIndex = 21;
+            button18.Text = "0";
+            button18.UseVisualStyleBackColor = false;
+            button18.Click += btnCalculadora_Click;
+            // 
+            // button13
+            // 
+            button13.BackColor = SystemColors.ButtonHighlight;
+            button13.FlatStyle = FlatStyle.Flat;
+            button13.Font = new Font("Trebuchet MS", 20F);
+            button13.Location = new Point(7, 377);
+            button13.Margin = new Padding(7, 8, 7, 8);
+            button13.Name = "button13";
+            button13.Size = new Size(216, 107);
+            button13.TabIndex = 20;
+            button13.Text = "1";
+            button13.UseVisualStyleBackColor = false;
+            button13.Click += btnCalculadora_Click;
+            // 
             // button20
             // 
             button20.BackColor = SystemColors.ButtonHighlight;
@@ -131,19 +159,19 @@
             button20.UseVisualStyleBackColor = false;
             button20.Click += btnCalculadora_Click;
             // 
-            // btnApagar
+            // btnLimpar
             // 
-            btnApagar.BackColor = SystemColors.ButtonHighlight;
-            btnApagar.FlatStyle = FlatStyle.Flat;
-            btnApagar.Font = new Font("Trebuchet MS", 20F);
-            btnApagar.Location = new Point(471, 500);
-            btnApagar.Margin = new Padding(7, 8, 7, 8);
-            btnApagar.Name = "btnApagar";
-            btnApagar.Size = new Size(216, 107);
-            btnApagar.TabIndex = 18;
-            btnApagar.Text = "C";
-            btnApagar.UseVisualStyleBackColor = false;
-            btnApagar.Click += btnApagar_Click;
+            btnLimpar.BackColor = SystemColors.ButtonHighlight;
+            btnLimpar.FlatStyle = FlatStyle.Flat;
+            btnLimpar.Font = new Font("Trebuchet MS", 20F);
+            btnLimpar.Location = new Point(471, 500);
+            btnLimpar.Margin = new Padding(7, 8, 7, 8);
+            btnLimpar.Name = "btnLimpar";
+            btnLimpar.Size = new Size(216, 107);
+            btnLimpar.TabIndex = 18;
+            btnLimpar.Text = "C";
+            btnLimpar.UseVisualStyleBackColor = false;
+            btnLimpar.Click += btnLimpar_Click;
             // 
             // btnIgual
             // 
@@ -379,37 +407,9 @@
             lbSequencias.Size = new Size(930, 61);
             lbSequencias.TabIndex = 3;
             // 
-            // button13
-            // 
-            button13.BackColor = SystemColors.ButtonHighlight;
-            button13.FlatStyle = FlatStyle.Flat;
-            button13.Font = new Font("Trebuchet MS", 20F);
-            button13.Location = new Point(7, 377);
-            button13.Margin = new Padding(7, 8, 7, 8);
-            button13.Name = "button13";
-            button13.Size = new Size(216, 107);
-            button13.TabIndex = 20;
-            button13.Text = "1";
-            button13.UseVisualStyleBackColor = false;
-            button13.Click += btnCalculadora_Click;
-            // 
-            // button18
-            // 
-            button18.BackColor = SystemColors.ButtonHighlight;
-            button18.FlatStyle = FlatStyle.Flat;
-            button18.Font = new Font("Trebuchet MS", 20F);
-            button18.Location = new Point(7, 500);
-            button18.Margin = new Padding(7, 8, 7, 8);
-            button18.Name = "button18";
-            button18.Size = new Size(216, 107);
-            button18.TabIndex = 21;
-            button18.Text = "0";
-            button18.UseVisualStyleBackColor = false;
-            button18.Click += btnCalculadora_Click;
-            // 
             // FrmCalculadora
             // 
-            AutoScaleDimensions = new SizeF(17F, 40F);
+            AutoScaleDimensions = new SizeF(11F, 27F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(967, 878);
@@ -432,7 +432,7 @@
         private TextBox txtResultado;
         private TableLayoutPanel tableLayoutPanel1;
         private Button button20;
-        private Button btnApagar;
+        private Button btnLimpar;
         private Button btnIgual;
         private Button button17;
         private Button button16;

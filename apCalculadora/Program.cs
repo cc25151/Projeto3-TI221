@@ -1,3 +1,7 @@
+// Integrantes:
+// Gabriel Bellini Camargo - 25131
+// Pedro Henrique Sakamoto Mendes - 25151
+
 namespace apCalculadora
 {
     internal static class Program
